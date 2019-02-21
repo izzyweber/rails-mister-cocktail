@@ -1,0 +1,14 @@
+<div class="banner">
+  <h1>Cocktails</h1>
+
+<div class="frosted">
+  <% @cocktails.each do |cocktail| %>
+  <li> <%= link_to  cocktail.name, cocktail_path(cocktail)%>
+<% end %>
+<hr>
+<%= link_to "Add a cocktail", new_cocktail_path %>
+</div>
+
+
+
+</div>
