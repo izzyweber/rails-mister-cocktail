@@ -8,9 +8,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+
   </head>
 
   <body>
+    <div class="navbar-wagon">
+      <a href="/" class="navbar-wagon-brand">
+        <i class="fas fa-cocktail"></i>
+      </a>
+    <div class="navbar-wagon-right hidden-xs hidden-sm">
+      <div class="recipe-list container">
+         <%= link_to "Add a cocktail", new_cocktail_path %>
+      </div>
+    </div>
+
+    </div>
     <%= yield %>
     <%= javascript_include_tag "application" %>
     <%= javascript_pack_tag "application" %>

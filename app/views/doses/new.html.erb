@@ -1,8 +1,12 @@
-<h1>Add a Dose to <%= @cocktail.name %></h1>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<%= f.input :ingredient_id, :collection => @ingredients %>
-<%= f.input :description %>
-<%= f.submit "Add"%>
-<% end %>
+<h2>Add a Dose to <%= @cocktail.name %>
+  <div class="form">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.input :ingredient_id, :collection => @ingredients %>
+    <%= f.input :description %>
+    <%= f.submit "Add"%>
+    <% end %>
+  </div>
+</h2>
+
 
 
