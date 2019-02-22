@@ -1,4 +1,4 @@
-<h2>Add a Dose to <%= @cocktail.name %>
+<h2>Add an ingredient to <%= @cocktail.name %>
   <div class="form">
     <%= simple_form_for [@cocktail, @dose] do |f| %>
     <%= f.input :ingredient_id, :collection => @ingredients %>

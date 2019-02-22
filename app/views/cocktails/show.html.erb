@@ -1,5 +1,11 @@
 <div class="container">
-<h1><%= @cocktail.name %></h1>
+<h1 class="show"style=
+        <% if @cocktail.photo? %>
+          "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url(<%= cl_image_path @cocktail.photo%>);"
+        <% else %>
+        "background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://images.unsplash.com/photo-1511715112108-9acc6c3ff61f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80');"
+        <% end %>
+        ><%= @cocktail.name %></h1>
 <h3>Recipe</h3>
 
   <%if @cocktail.ingredients %>
@@ -10,7 +16,7 @@
         </li>
       <% end %>
     </ul>
-      <%= link_to "Add another dose", new_cocktail_dose_path(@cocktail) %>
+      <%= link_to "Add an ingredient", new_cocktail_dose_path(@cocktail) %>
   <% else  %>
     <p>No doses yet!</p>
     <li><%= link_to "Add a dose", new_cocktail_dose_path(@cocktail) %></li>
